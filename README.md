@@ -14,7 +14,7 @@ The compiler can be included in vendor.js or loaded via a script.
 1. Install `ember-inject-script` addon.
 2. Inject `ember-template-compiler.js` in afterModel of the route where the component will be rendered.
 
-```
+```javascript
 import Ember from 'ember';
 import injectScript from 'ember-inject-script';
 
