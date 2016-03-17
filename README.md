@@ -4,7 +4,7 @@ Allows to render a template from a string.
 
 For example `{{dynamic-render '<h1>{{model.foo}}</h1>' model}}`
 
-## Requres HTMLBars compiler
+## Requires HTMLBars compiler
 
 HTMLBars compiler must be explicitely loaded before this component is rendered.
 The compiler can be included in vendor.js or loaded via a script.
