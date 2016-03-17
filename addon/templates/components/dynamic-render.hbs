@@ -1,0 +1,7 @@
+{{#if isBadTemplate}}
+  <div class="dynamic-render--error">{{compiled.message}}</div>
+{{else}}
+  {{#if isReady}}
+    {{component '-dynamic-render' layout=compiled model=model}}
+  {{/if}}
+{{/if}}

@@ -1,6 +1,6 @@
 {
   "name": "ember-dynamic-render",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -37,13 +37,15 @@
     "ember-load-initializers": "^0.5.0",
     "ember-resolver": "^2.0.3",
     "ember-try": "^0.1.2",
-    "loader.js": "^4.0.0"
+    "loader.js": "^4.0.0",
+    "ember-inject-script": "0.0.2" 
   },
   "keywords": [
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.5"
+    "ember-cli-babel": "^5.1.5",
+    "ember-cli-htmlbars": "^1.0.1"   
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

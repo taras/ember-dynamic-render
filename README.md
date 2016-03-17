@@ -1,26 +1,35 @@
-# Ember-dynamic-render
+# ember-dynamic-render
 
-This README outlines the details of collaborating on this Ember addon.
+Allows to render a template from a string. 
 
-## Installation
+For example `{{dynamic-render '<h1>{{model.foo}}</h1>' model}}`
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+## Requres HTMLBars compiler
 
-## Running
+HTMLBars compiler must be explicitely loaded before this component is rendered.
+The compiler can be included in vendor.js or loaded via a script.
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+### Loading script in route
 
-## Running Tests
+1. Install `ember-inject-script` addon.
+2. Inject `ember-template-compiler.js` in afterModel of the route where the component will be rendered.
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```
+import Ember from 'ember';
+import injectScript from 'ember-inject-script';
 
-## Building
+export default Ember.Route.extend({
+  model() {
+    return { foo: 'bar' };
+  },
+  afterModel() {
+    return injectScript('//builds.emberjs.com/release/ember-template-compiler.js');
+  }
+});
+```
 
-* `ember build`
+### vendor.js
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+**Note**: this will increase the download size of your application. Consider loading script in the route.
+
+In `ember-cli-build.js` add `app.import('bower_components/ember/ember-template-compiler.js')`.

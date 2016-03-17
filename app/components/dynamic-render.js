@@ -1,0 +1,1 @@
+export { default } from 'ember-dynamic-render/components/dynamic-render';
