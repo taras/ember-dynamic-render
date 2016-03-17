@@ -1,4 +1,4 @@
-# ember-dynamic-render
+# ember-dynamic-render [![Build Status](https://travis-ci.org/taras/ember-dynamic-render.svg?branch=master)](https://travis-ci.org/taras/ember-dynamic-render)
 
 Allows to render a template from a string. 
 
